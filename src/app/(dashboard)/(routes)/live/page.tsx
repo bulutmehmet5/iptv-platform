@@ -7,7 +7,7 @@ import { CategorySelector } from '@/components/shared/category-selector';
 import { ContentGrid } from '@/components/shared/content-grid';
 import { ChannelCard } from '@/components/shared/channel-card';
 import { VideoPlayer } from '@/components/player/video-player';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { useAuthStore } from '@/store/auth-store';
 import { useContentStore } from '@/store/content-store';
 import { getLiveCategories, getLiveStreamsByCategory, getLiveStreamUrl, getEPG } from '@/lib/api/xtream';
@@ -197,6 +197,9 @@ export default function LivePage() {
       {/* Player Dialog */}
       <Dialog open={isPlayerOpen} onOpenChange={setIsPlayerOpen}>
         <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black">
+          <DialogTitle className="sr-only">
+            {selectedStream ? selectedStream.name : 'Live TV Player'}
+          </DialogTitle>
           {selectedStream && credentials && (
             <VideoPlayer
               playbackInfo={{
