@@ -5,7 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Loader2, Play, ArrowLeft, Star, Clock, Calendar, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { VideoPlayer } from '@/components/player/video-player';
+import { VidstackPlayer } from '@/components/player/vidstack-player';
 import { ContentCard } from '@/components/shared/content-card';
 import { ContentGrid } from '@/components/shared/content-grid';
 import { useAuthStore } from '@/store/auth-store';
@@ -160,7 +160,7 @@ export default function MovieDetailPage() {
             Back to Details
           </Button>
           
-          <VideoPlayer
+          <VidstackPlayer
             playbackInfo={{
               id: movie.stream_id,
               title: movie.name,
@@ -174,7 +174,6 @@ export default function MovieDetailPage() {
               type: 'movie',
               thumbnailUrl: posterUrl,
             }}
-            className="rounded-lg overflow-hidden"
           />
         </div>
       ) : (

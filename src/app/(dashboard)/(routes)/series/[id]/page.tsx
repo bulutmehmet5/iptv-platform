@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Loader2, Play, ArrowLeft, Star, Calendar, Heart, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { VideoPlayer } from '@/components/player/video-player';
+import { VidstackPlayer } from '@/components/player/vidstack-player';
 import { ContentCard } from '@/components/shared/content-card';
 import { ContentGrid } from '@/components/shared/content-grid';
 import { useAuthStore } from '@/store/auth-store';
@@ -182,7 +182,7 @@ export default function SeriesDetailPage() {
             Back to Series
           </Button>
           
-          <VideoPlayer
+          <VidstackPlayer
             playbackInfo={{
               id: selectedEpisode.id,
               title: `${series.name} - S${selectedEpisode.season_num}E${selectedEpisode.episode_num}: ${selectedEpisode.title || ''}`,
@@ -202,7 +202,6 @@ export default function SeriesDetailPage() {
                 episodeTitle: selectedEpisode.title || '',
               }
             }}
-            className="rounded-lg overflow-hidden"
           />
           
           <div className="pt-4">

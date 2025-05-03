@@ -6,7 +6,7 @@ import { Loader2 } from 'lucide-react';
 import { CategorySelector } from '@/components/shared/category-selector';
 import { ContentGrid } from '@/components/shared/content-grid';
 import { ChannelCard } from '@/components/shared/channel-card';
-import { VideoPlayer } from '@/components/player/video-player';
+import { VidstackPlayer } from '@/components/player/vidstack-player';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { useAuthStore } from '@/store/auth-store';
 import { useContentStore } from '@/store/content-store';
@@ -201,7 +201,7 @@ export default function LivePage() {
             {selectedStream ? selectedStream.name : 'Live TV Player'}
           </DialogTitle>
           {selectedStream && credentials && (
-            <VideoPlayer
+            <VidstackPlayer
               playbackInfo={{
                 id: selectedStream.stream_id,
                 title: selectedStream.name,
