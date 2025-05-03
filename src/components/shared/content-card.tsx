@@ -66,7 +66,7 @@ export function ContentCard({
       <div className="aspect-[2/3] relative overflow-hidden rounded-lg">
         <Image
           src={posterUrl || '/placeholder-poster.jpg'}
-          alt={title}
+          alt={`${title} ${type === 'movie' ? 'movie' : 'series'} poster`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover"

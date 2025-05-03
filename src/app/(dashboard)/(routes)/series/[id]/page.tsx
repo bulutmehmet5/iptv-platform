@@ -236,7 +236,7 @@ export default function SeriesDetailPage() {
               {backdropUrl && (
                 <Image
                   src={backdropUrl}
-                  alt={series.name}
+                  alt={`${series.name} backdrop image`}
                   fill
                   className="object-cover"
                   priority
@@ -253,7 +253,7 @@ export default function SeriesDetailPage() {
               <div className="w-40 md:w-64 flex-shrink-0 rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src={posterUrl || '/placeholder-poster.jpg'}
-                  alt={series.name}
+                  alt={`${series.name} series poster`}
                   width={256}
                   height={384}
                   className="w-full h-auto"

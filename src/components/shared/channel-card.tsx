@@ -62,7 +62,7 @@ export function ChannelCard({
           <div className="relative h-12 w-12 overflow-hidden rounded">
             <Image
               src={logoUrl || '/placeholder-channel.png'}
-              alt={name}
+              alt={`${name} channel logo`}
               fill
               sizes="48px"
               className="object-contain"

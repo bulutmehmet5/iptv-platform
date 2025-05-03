@@ -197,7 +197,7 @@ export default function MovieDetailPage() {
               {backdropUrl && (
                 <Image
                   src={backdropUrl}
-                  alt={movie.name}
+                  alt={`${movie.name} backdrop image`}
                   fill
                   className="object-cover"
                   priority
@@ -214,7 +214,7 @@ export default function MovieDetailPage() {
               <div className="w-40 md:w-64 flex-shrink-0 rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src={posterUrl || '/placeholder-poster.jpg'}
-                  alt={movie.name}
+                  alt={`${movie.name} movie poster`}
                   width={256}
                   height={384}
                   className="w-full h-auto"
